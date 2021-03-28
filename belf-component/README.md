@@ -141,7 +141,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 export default wrapper.withRedux(MyApp);
 ```
 
-```tsx
+```json
 /.babelrc
 
 {
@@ -160,7 +160,7 @@ export default wrapper.withRedux(MyApp);
 }
 ```
 
-```tsx
+```json
 /package.json
 
 {
