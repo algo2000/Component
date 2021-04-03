@@ -1,5 +1,4 @@
 import Document, { DocumentContext } from 'next/document';
-import Head from 'next/head';
 import React from 'react';
 import { ServerStyleSheet } from 'styled-components'
 
@@ -20,7 +19,6 @@ export default class MyDocument extends Document {
         ...initialProps,
         styles: (
           <>
-          
             {initialProps.styles}
             {sheet.getStyleElement()}
           </>
