@@ -1,19 +1,12 @@
-const lightButton = {
-    btnForground: '#FF924A',
-    btnBackground: '#ffffff',
-}
-
-const darkButton = {
-    btnForground: '#FF924A',
-    btnBackground: '#1D1D1D',
-}
-
 export const lightTheme = {
     bgColor: '#FFF6EF',
     textColor: '#000000',
     toggleBorder: '#FFF',
     gradient: 'linear-gradient(#39598A, #79D7ED)',
-    lightButton,
+    buttonDesign : {
+        color: '#FF924A',
+        backgroundColor: '#ffffff',
+    },
 }
 
 export const darkTheme = {
@@ -21,7 +14,10 @@ export const darkTheme = {
     textColor: '#FFFFFF',
     toggleBorder: '#6B8096',
     gradient: 'linear-gradient(#091236, #1E215D)',
-    darkButton,
+    buttonDesign : {
+        color: '#FF924A',
+        backgroundColor: '#1D1D1D',
+    },
 }
 
 export const theme = {

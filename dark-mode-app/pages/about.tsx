@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import React from 'react'
+import ButtonCustom from '../components/ButtonCustom'
 import Display from '../components/Display'
 import Layout from '../components/Layout'
 
@@ -9,7 +11,7 @@ const AboutPage = () => (
     <Display/>
     <p>
       <Link href="/">
-        <button>Go home</button>
+        <ButtonCustom text="Go home"></ButtonCustom>
       </Link>
     </p>
   </Layout>

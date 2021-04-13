@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import ButtonCustom from '../components/ButtonCustom'
 import Input from '../components/Input'
 import Layout from '../components/Layout'
 
@@ -9,7 +10,7 @@ const IndexPage = () => (
     <Input/>
     <p>
       <Link href="/about">
-        <button>About</button>
+        <ButtonCustom text="About"></ButtonCustom>
       </Link>
     </p>
   </Layout>
