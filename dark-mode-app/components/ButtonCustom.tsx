@@ -23,7 +23,7 @@ const ButtonCustom = ({text, onClick}:ButtonType) => {
 
 ButtonCustom.defaultProps = {
   text: "button",
-  onClick: (text: string) => {console.error(`Missing onClick prop: ${text}`)},
+  onClick: () => {},
 }
 
 export default ButtonCustom;

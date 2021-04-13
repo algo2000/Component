@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { useRecoilState } from 'recoil'
 import themeState from './themeState'
+import ButtonCustom from './ButtonCustom'
 
 type Props = {
   children?: ReactNode
@@ -37,7 +38,8 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => {
               <a>Users List</a>
             </Link>{' '}
         | <a href="/api/users">Users API</a>
-          <button onClick={themeToggler}>Dark Mode</button>
+          <ButtonCustom onClick={themeToggler}
+                        text={theme == 'light' ? 'Dark Mode' : 'Light Mode'}/>
           </nav>
         </header>
         {children}
