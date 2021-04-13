@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import { useRecoilState } from 'recoil'
-import themeState from './ThemeState'
+import themeState from './themeState'
 
 type Props = {
   children?: ReactNode

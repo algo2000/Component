@@ -3,7 +3,7 @@ import { useRecoilState } from 'recoil'
 import { ThemeProvider } from "styled-components"
 import { darkTheme, lightTheme } from "../theme/theme"
 import { GlobalStyle } from "./GlobalStyles"
-import themeState from './ThemeState'
+import themeState from './themeState'
 
 type props = {
   children?: ReactNode,

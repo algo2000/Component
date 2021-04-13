@@ -9,7 +9,7 @@ const AboutPage = () => (
     <Display/>
     <p>
       <Link href="/">
-        <a>Go home</a>
+        <button>Go home</button>
       </Link>
     </p>
   </Layout>
