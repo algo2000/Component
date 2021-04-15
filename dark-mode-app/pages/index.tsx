@@ -3,6 +3,7 @@ import React from 'react'
 import ButtonCustom from '../components/ButtonCustom'
 import Input from '../components/Input'
 import Layout from '../components/Layout'
+import NavigationBar from '../components/NavigationBar'
 
 const IndexPage = () => (
   <Layout title="Home | Next.js + TypeScript Example">

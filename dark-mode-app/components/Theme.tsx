@@ -1,7 +1,8 @@
 import React, { ReactNode } from 'react'
 import { useRecoilState } from 'recoil'
 import { ThemeProvider } from "styled-components"
-import { darkTheme, lightTheme } from "../theme/theme"
+import darkTheme from '../theme/darkTheme'
+import lightTheme from '../theme/lightTheme'
 import { GlobalStyle } from "./GlobalStyles"
 import themeState from './themeState'
 
