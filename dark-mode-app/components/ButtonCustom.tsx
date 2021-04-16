@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import styled from "styled-components";
 
 const ButtonStyle = styled.button`
@@ -16,7 +17,9 @@ const ButtonCustom = ({text, onClick}:ButtonType) => {
 
   return (
     <>
-      <ButtonStyle onClick={onClick}>{text}</ButtonStyle>
+      <ButtonStyle onClick={onClick}>
+        {text}
+      </ButtonStyle>
     </>
   )
 }

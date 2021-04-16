@@ -9,11 +9,11 @@ const AboutPage = () => (
     <h1>About</h1>
     <p>This is the about page</p>
     <Display/>
-    <p>
-      <Link href="/">
-        <ButtonCustom text="Go home"></ButtonCustom>
-      </Link>
-    </p>
+    <Link href="/" passHref>
+      <p>
+        <ButtonCustom text="Go home"/>
+      </p>
+    </Link>
   </Layout>
 )
 

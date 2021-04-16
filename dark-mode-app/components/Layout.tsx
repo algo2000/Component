@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { useRecoilState } from 'recoil'
 import themeState from './themeState'
 import ButtonCustom from './ButtonCustom'
-import NavigationBar from './NavigationBar'
+import NavigationBar from './NavigationBar/NavigationBar'
 
 type Props = {
   children?: ReactNode
@@ -27,11 +27,11 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => {
       </Head>
       <header>
         <nav>
-          <Link href="/">
+          <Link href="/" passHref>
             <a>Home</a>
           </Link>{' '}
         |{' '}
-          <Link href="/about">
+          <Link href="/about" passHref>
             <a>About</a>
           </Link>{' '}
         |{' '}

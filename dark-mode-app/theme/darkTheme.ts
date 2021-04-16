@@ -17,6 +17,7 @@ const darkTheme = {
       backgroundColor: '#1D1D1D',
   },
   navigationBar,
+  // boxShadow: '0px 0px 1px rgba(0, 0, 0, 0.15)',
 }
 
 export default darkTheme

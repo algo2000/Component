@@ -17,7 +17,6 @@ const Theme = ({children}:props) => {
   return(
     <>
       <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-      {/* <ThemeProvider theme={lightTheme}> */}
         <GlobalStyle/>
         {children}
       </ThemeProvider>
