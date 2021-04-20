@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import Counter from '../components/Counter'
-import Input from '../components/input'
+import Input from '../components/Input'
 import Layout from '../components/Layout'
 
 const IndexPage = () => (
