@@ -3,7 +3,7 @@ import { charState, nameState } from "./states"
 
 const Display = () => {
   const charName = useRecoilValue(charState)
-  const [name, setName] = useRecoilState(nameState)
+  const [name] = useRecoilState(nameState)
 
   return (
     <>
