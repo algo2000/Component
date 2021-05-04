@@ -1,68 +1,56 @@
-```bash
-$ npm i styled-components
-$ npm i -D @types/styled-components
+폴더 구조
 ```
+/.github
+ /workflows
+  build-and-test.yml
+/app
+ /api
+  /[Name]API
+   [Name]API.js
+   [Name]API.test.js
+  RestClient.ts
+ /components
+  /elements
+   /[Name]
+    [Name].tsx
+    [Name].module.scss
+    [Name].test.ts
+  /modules
+  /templates
+  /layouts
+ /constants
+ /context
+  /[Name]Context
+   [Name]Provider.tsx
+   [Name]Reducer.ts
+   [Name]Actions.ts
+ /hooks
+ /styles
+  /abstracts
+   _functions.scss
+   _mixins.scss
+   _variables.scss
+  /base
+   _base.scss
+   _typography.scss
+  app.scss
+ /types
+ /utils
+/test
+ /fixtures
+ /spec
+  /integration
+  /e2e
+ /support
+/pages
+ 404.tsx
+ _app.tsx
+ _document.tsx
+ _error.tsx
+ indext.tsx
+/public
+ /images
+ robots.txt
+ favicon.ico
 
-```bash
-$ npm i -D babel-plugin-styled-components
-```
-
-```bash
-npm install recoil
-```
-
-```ts
-/pages/_app.tsx
-
-import React from "react";
-import { AppProps } from "next/app";
-import { RecoilRoot } from "recoil";
-
-const MyApp = ({ Component, pageProps }: AppProps) => {
-  return (
-    <>
-      <RecoilRoot>
-        <Component {...pageProps} />
-      </RecoilRoot>
-    </>
-  );
-};
-
-export default MyApp;
-```
-
-```ts
-/pages/_document.tsx
-
-import React from 'react';
-import Document, { DocumentContext } from 'next/document';
-import { ServerStyleSheet } from 'styled-components'
-
-export default class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
-    const sheet = new ServerStyleSheet()
-    const originalRenderPage = ctx.renderPage
-
-    try {
-      ctx.renderPage = () =>
-        originalRenderPage({
-          enhanceApp: (App) => (props) =>
-            sheet.collectStyles(<App {...props} />),
-        })
-
-      const initialProps = await Document.getInitialProps(ctx)
-      return {
-        ...initialProps,
-        styles: (
-          <>
-            {initialProps.styles}
-            {sheet.getStyleElement()}
-          </>
-        ),
-      }
-    } finally {
-      sheet.seal()
-    }
-  }
-}
 ```
