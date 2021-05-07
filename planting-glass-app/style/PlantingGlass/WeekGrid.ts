@@ -7,4 +7,4 @@ const WeekGrid = styled.div`
   grid-gap: 4px;
 `;
 
-export default WeekGrid;
+export default WeekGrid;  
