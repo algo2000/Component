@@ -1,14 +1,14 @@
 import React from 'react';
 import { useRecoilValueLoadable } from 'recoil';
 import { plantingGlassState } from './container'
-import Test from './Test';
+import Component from './Component';
 
 const PlantingGlass = () => {
   const user = useRecoilValueLoadable(plantingGlassState);
 
   switch (user.state){
     case 'hasValue':
-      return <><Test/></>
+      return <><Component/></>
     case 'loading':
       return <div>Loading...</div>
     case 'hasError':

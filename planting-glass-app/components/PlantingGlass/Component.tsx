@@ -21,7 +21,7 @@ const colorGenerator = (avg: number, value: number): string => {
   }
 }
 
-const Test = () => {
+const Component = () => {
       const array = useRecoilValue(platingGlass2dArray);
       const avg = useRecoilValue(countAvg);
 
@@ -41,4 +41,4 @@ const Test = () => {
         </S.Card>
       )
 }
-export default Test;
+export default Component;
