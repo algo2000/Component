@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-const DayItem = styled.div<{ color: string }>`
+const DayItem = styled.div<{ color: string, skeleton: boolean }>`
   display: flex;
   justify-content: center;
   ${(props) => {

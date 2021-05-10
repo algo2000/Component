@@ -17,6 +17,7 @@ export const plantingGlassState = atom<Glass[]>({
     get: async () => {
       try{
         const res = await fetch(`http://localhost:3001/1/glass`)
+        sleep(3000)
         const json: DateTime[] = await res.json()
         let glass = json.map((e: DateTime): Glass => {
           var dayOfWeek = new Array('일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일');
@@ -61,3 +62,8 @@ export const platingGlass2dArray = selector({
     return array;
   }
 })
+
+function sleep(ms: number) {
+  const wakeUpTime = Date.now() + ms
+  while (Date.now() < wakeUpTime) {}
+}
