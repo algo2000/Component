@@ -1,12 +1,16 @@
+import { AnimatePresence } from "framer-motion";
 import { AppProps } from "next/app";
 import React from "react";
+import Layout from "../components/layout";
 import { wrapper } from "../config/store";
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+const MyApp = ({ Component, pageProps, router }: AppProps) => {
   return (
-    <>
-      <Component {...pageProps} />
-    </>
+    <Layout>
+      <AnimatePresence exitBeforeEnter>
+        <Component {...pageProps} key={router.route} />
+      </AnimatePresence>
+    </Layout>
   );
 };
 

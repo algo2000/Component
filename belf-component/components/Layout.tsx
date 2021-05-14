@@ -1,37 +1,61 @@
-import React, { ReactNode } from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
+import { ReactNode } from 'react';
+import Header from './header';
 
 type Props = {
-  children?: ReactNode
-  title?: string
+  children?: ReactNode;
 }
 
-const Layout = ({ children, title = 'This is the default title' }: Props) => (
-  <div>
-    <Head>
-      <title>{title}</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    <header>
-      <nav>
-        <Link href="/">
-          <a>Home</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/about">
-          <a>About</a>
-        </Link>{' '}
-        |{' '}
-      </nav>
-    </header>
-    {children}
-    <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
-    </footer>
-  </div>
-)
+const Layout = ({ children }: Props): any => {
+  return (
+    <div className="page-wrapper">
+      <Header />
 
-export default Layout
+      <div className="content -wrapper">{children}</div>
+
+      <style jsx global>{`
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-size: 20px;
+        line-height: 1.7;
+        font-weight: 400;
+        background: #fff;
+        color: #454545;
+        font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', 'Fira Sans', Avenir, 'Helvetica Neue',
+          'Lucida Grande', sans-serif;
+        text-rendering: optimizeLegibility;
+      }
+
+      a {
+        color: #1b789e;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #166281;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      .content-wrapper {
+        max-width: 900px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 40px 0;
+      }
+
+      .container {
+        overflow: hidden;
+      }
+    `}</style>
+    </div>
+  );
+};
+export default Layout;
